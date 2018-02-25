@@ -1,5 +1,6 @@
 #Java Werewolf Game Easter Egg mode game file.
 #Texts written by LLamaBoy.
+#Updated by Araver to work with MMBot
 
 1-WOLF
 Tribble
@@ -16,14 +17,32 @@ Doctor
 ROLE-VILLAGER
 Redshirt
 
+NOGAME-IN-PROGRESS
+Sorry, no game is in progress. Type !start or !spymafia to start a game or !howto to see the commands.
+
+NOT-PLAYING
+Sorry, but you're not playing. Please wait for this game to finish.
+
+GAME-HAS-STOPPED
+Game has been stopped. Sorry, but PLAYER is the boss!
+
+GAME-IS-NOT-ON
+There's no game on! Are you trying to confuse me Boss?
+
 STARTGAME
-PLAYER has activated the Secret Star Trek Mode! It's Redshirts vs. Tribbles aboard an abandoned vessel.
+PLAYER has activated the Star Trek Mode! It's Redshirts vs. Tribbles aboard an abandoned vessel. Everyone else has TIME seconds to join in the mob. '/msg BOTNAME join' to join the away team
 
 STARTGAME-NOTICE
 Ensign PLAYER is organizing an away team.
 
+GAME-IS-FULL
+Enough people have joined the away team.
+
 ADDED
 Added to the game. Your role will be given once registration elapses.
+
+ADD-FAILED
+Could not add you to player list. Please try again.
 
 GAME-STARTED
 Welcome, cadet. '/msg BOTNAME join' to enlist in the Federation.
@@ -32,7 +51,10 @@ GAME-PLAYING
 An away team is currently on a mission. Please wait for them to return before starting a new mission.
 
 NOT-ENOUGH
-4 members is the Federation minimum for an away team; request denied.
+5 members is the Federation minimum for an away team; request denied.
+
+ALREADY-PLAYING
+You are already on the away team.
 
 ADD-PRIORITY
 Adding priority players...
@@ -48,6 +70,12 @@ Duration of the night now set to TIME seconds.
 
 VOTECHANGE
 Duration of the Lynch Vote now set to TIME seconds.
+
+JOINCHANGE
+Duration of the join time now set to TIME seconds.
+
+REMINDERCHANGE
+Duration of the reminder interval is now set to TIME seconds.
 
 JOIN
 PLAYER has put on his standard issue Federation uniform.
@@ -71,62 +99,104 @@ DAYTIME
 Team, you now have TIME seconds to discuss with your crewmates who you believe the WOLF to be. After the discussion period, you may vote for who you think is the guilty party.
 
 VOTETIME
-Team, you have TIME seconds to select who you believe to be a Tribble. '/msg BOTNAME vote <player>' with your vote, the player with the majority of the votes will be disposed of.
+Team, you have TIME seconds to select who you believe to be a Tribble. Type '/msg BOTNAME vote <player>' or '/msg BOTNAME voteno <player number on roster>' to cast your vote. You can choose to not vote with '/msg BOTNAME abstain'. Votes are non retractable - all votes are final! 
+
+VOTETIMECHANGEALLOWED
+Team, you now have TIME seconds to vote for the person you would like to see lynched! Type '/msg BOTNAME vote <player>' or '/msg BOTNAME voteno <player number on roster>' to cast your vote. You can choose to not vote with '/msg BOTNAME abstain'. You can remove your vote with '/msg BOTNAME removevote'! After you vote, you can mark your vote as final '/msg BOTNAME finalvote' - no changes will be allowed afterwards. 
+
+TIEFIRSTDAY-RANDOMLYNCH
+This is the first day. If the vote is tied, one random player in the tie will be lynched.
+
+TIEFIRSTDAY-NOLYNCH
+This is the first day. If the vote is tied, no one will be lynched.
+
+TIEANYDAY-RANDOMLYNCH
+Remember, if the vote is tied, one random player in the tie will be lynched.
+
+TIEANYDAY-NOLYNCH
+Remember, if the vote is tied, no one will be lynched.
+
+MAJORITY-ABSTAIN-WINS
+If at least TIME players choose to abstain then there will be no lynch today!
+
+REMINDER-JOINTIME
+REMINDER: Joining ends in TIME seconds! Hurry!
+
+REMINDER-DAYTIME
+REMINDER: Lynch vote will start in TIME minutes!
+
+REMINDER-VOTETIME
+REMINDER: Vote will end in TIME minutes!
+
+REMINDER-NIGHTTIME
+REMINDER: Night will end in TIME minutes!
+
+HAS-ABSTAINED
+PLAYER has chosen to abstain.
+
+HAS-FINALIZED
+PLAYER has finalized their vote.
+
+HAS-REMOVED-ABSTAIN
+PLAYER has renounced their abstain vote.
 
 HAS-VOTED
 PLAYER has voted for PLAYR2!
 
+HAS-REMOVED-VOTE
+PLAYER has removed their vote.
+
+VOTE-INSTRUCTIONS
+Please vote in the correct format: /msg BOTNAME vote <player> or /msg BOTNAME voteno <player number on roster> or 
+/msg BOTNAME abstain or /msg BOTNAME finalvote or /msg BOTNAME finalvote <player> or /msg BOTNAME finalvoteno <number> or /msg BOTNAME nocontest.
+
+ALREADY-FINALIZED-VOTE
+You've finalized your vote for today. Wait for the lynch to finish.
+
+ALREADY-FINAL-VOTE
+Votes automatically count as final as you cannot change your vote. Stop confusing me :P
+
+ALREADY-VOTED
+You've already voted today. You cannot change your vote and you may not vote again until tomorrow.
+
+ALREADY-ABSTAIN
+You've already told me you want to abstain. Stop confusing me :P
+
+HAVE-NOT-VOTED-YET
+You have not voted yet. Vote first, then tell me it's final. And stop confusing me :P
+
+HAVE-NOT-VOTED-BEFORE
+Nothing to remove as you have not voted yet. Stop confusing me :P
+
+CANNOT-VOTE-CHOICE
+Your choice is not valid.
+
+CANNOT-VOTE-DEAD
+You cannot vote. You are dead.
+
+CANNOT-VOTE-DEAD-PEOPLE
+You cannot vote dead people. They are already dead!
+
+CANNOT-REMOVE-VOTE
+You cannot remove your vote!
+
+CHOICE-NOT-PLAYING
+Your choice is not playing in the current game. Please select someone else.
+
+ALL-VOTES-IN
+All the votes are in! A decision will be made shortly.
+
+ALL-VOTES-FINAL
+All the votes are final! A decision will be made shortly.
+
+PLAYER-HAS-PLEADED-NO-CONTEST
+PLAYER has pleaded "No contest!". All votes are cast on him!
+
 NO-VOTES
 No votes were cast. It seems this away team have a death wish...
 
-FIRSTNIGHT
-The crew set out on a search of the abandoned vessel, not knowing that they have been infiltrated by an imposter...
-
-NIGHTTIME
-While everyone is uneasy about searching the vessel further, their ship requires more supplies, so everyone parts ways again in search of anything salvagable...
-
-WOLF-INSTRUCTIONS
-Tribble, you have TIME seconds to select someone to ambush and devour.  Type 'msg BOTNAME kill <player>' choose a victim.
-
-WOLVES-INSTRUCTIONS
-Tribbles, you have TIME seconds to agree on someone to ambush and devour. Type 'msg BOTNAME kill <player>' choose a victim.
-
-SEER-INSTRUCTIONS
-Doctor, you have TIME seconds to choose who you wish to scan at the end of the search period. Type 'msg BOTNAME see <player>' to discover their species.
-
-WOLF-CHOICE
-You have chosen an unsuspecting PLAYER to ambush.
-
-WOLVES-CHOICE
-You have chosen PLAYER to ambush. We shall see who your fellow Tribble selects...
-
-WOLVES-CHOICE-OTHER
-PLAYER has chosen to kill PLAYR2.
-PLAYR2 is PLAYER's choice of victim this time.
-
-VILLAGER-ROLE
-You are a regular Federation Away Team member, AKA a Redshirt. You must search the abandoned vessel during the search period, and discuss with the others you think the Tribble(s) may be after each search.
-
-V-ROLE
-You are a Redshirt.
-
-WOLF-ROLE
-You are the infiltrator within the crew, you are a Tribble! Using your latest technology RealRedshirt(tm) suit, you must attempt to exterminate the humans one by one before they discover your plans for this sector.
-
-W-ROLE
-You are a Tribble.
-
-WOLVES-ROLE
-You are an infiltrator within the crew, you are a Tribble! Using your latest technology RealRedshirt(tm) suit, you must work with PLAYER, your companion, in order to exterminate the humans one by one before they discover your plans for this sector.
-
-WS-ROLE
-You are a Tribble. Your counterpart is PLAYER.
-
-SEER-ROLE
-You are the Away Team's doctor. Your medical tricorder has enough energy to scan a single person after every search period, revealing their true biological chemistry.
-
-S-ROLE
-You are the team doctor.
+ABSTAIN-NO-LYNCH
+At least half of alive players have voluntarily abstained. No one is getting lynched today!
 
 LYNCH-LEFT
 The guilty party has left, no lynching.
@@ -146,6 +216,73 @@ PLAYER, the ROLE, is lynched!
 
 NO-LYNCH
 Overcome with team spirit, the crew decide no-one should be killed without a conclusive majority of votes.
+
+TIE-NO-LYNCH
+As the sun gets low in the sky, the goodies are unable to reach a decision on who to lynch. A tie is reached and the crowd slowly dissipates to take shelter in their homes...
+
+TIE
+As the sun gets low in the sky, the goodies are unable to reach a decision on who to lynch - a tie is reached. According to the rules, a coinflip will decide today's lynch...
+
+ROSTER-DISPLAY-OFF-NOTICE
+Roster display is not on. It can be turned on by an OP after the game is finished!
+
+ROSTER-DISPLAY-PROBLEM
+Unknown problem showing the roster. Sorry!
+
+SEPARATOR
+-------------------------------------
+
+FIRSTNIGHT
+The crew set out on a search of the abandoned vessel, not knowing that they have been infiltrated by an imposter...
+
+NIGHTTIME
+While everyone is uneasy about searching the vessel further, their ship requires more supplies, so everyone parts ways again in search of anything salvagable...
+
+WOLF-INSTRUCTIONS
+Tribble, you have TIME seconds to select someone to ambush and devour.  Type 'msg BOTNAME kill <player>' to choose a victim or '/msg BOTNAME killno <number>'.
+
+WOLVES-INSTRUCTIONS
+Tribbles, you have TIME seconds to agree on someone to ambush and devour. Type 'msg BOTNAME kill <player>' to choose a victim or '/msg BOTNAME killno <number>'.
+
+SEER-INSTRUCTIONS
+Doctor, you have TIME seconds to choose who you wish to scan at the end of the search period. Type 'msg BOTNAME see <player>' to discover their species or '/msg BOTNAME seeno <number>'.
+
+WOLF-CHOICE
+You have chosen an unsuspecting PLAYER to ambush.
+
+WOLVES-CHOICE
+You have chosen PLAYER to ambush. We shall see who your fellow Tribble selects...
+
+WOLF-WRONG-CHOICE
+Please choose a valid player.
+
+WOLVES-CHOICE-OTHER
+PLAYER has chosen to kill PLAYER2.
+PLAYER2 is PLAYER's choice of victim this time.
+
+VILLAGER-ROLE
+You are a regular Federation Away Team member, AKA a Redshirt. You must search the abandoned vessel during the search period, and discuss with the others you think the Tribble(s) may be after each search.
+
+V-ROLE
+REMINDER: You are a Redshirt.
+
+WOLF-ROLE
+You are the infiltrator within the crew, you are a Tribble! Using your latest technology RealRedshirt(tm) suit, you must attempt to exterminate the humans one by one before they discover your plans for this sector.
+
+W-ROLE
+REMINDER: You are a Tribble.
+
+WOLVES-ROLE
+You are an infiltrator within the crew, you are a Tribble! Using your latest technology RealRedshirt(tm) suit, you must work with PLAYER, your companion, in order to exterminate the humans one by one before they discover your plans for this sector.
+
+WS-ROLE
+REMINDER: You are a Tribble. Your counterpart is PLAYER.
+
+SEER-ROLE
+You are the Away Team's doctor. Your medical tricorder has enough energy to scan a single person after every search period, revealing their true biological chemistry.
+
+S-ROLE
+REMINDER: You are the team doctor.
 
 VILLAGER-KILL
 As the time nears for the team to regroup, an alarm sounds throughout the ship: "Bulkhead breached". Everyone rushes to the engineering room to erect a forcefield around the affected area. Once verified as safe again, the group go to see what had happened. They find PLAYER there, or about half of them, hanging from the wall. It appears the WOLF had pierced the ship and attempted to feed PLAYER through it...
@@ -191,11 +328,38 @@ The Tribbles were:
 SEER-DEAD
 Being a doctor, you should know that being dead impedes your ability to operate your tricorder.
 
+WOLF-DEAD
+You are dead and can no longer help the Tribbles win.
+
 NOT-WOLF
 You are not a Tribble!
 
+ALIVE-TEXT
+The players left alive are: 
+
 WILL-SEE
 Your tricorder will reveal the truth about PLAYER when the team gather again...
+
+CANNOT-SPY-WOLF
+You cannot use a medical tricorder. Nice try :P
+
+CANNOT-SPY-DEAD-PEOPLE
+You cannot use a medical tricorder on dead people. Choose someone else.
+
+CANNOT-SPY-YOURSELF
+You already know who you are! You are a Doctor!
+
+CANNOT-SPY-BYSTANDERS
+That person is not playing.
+
+CANNOT-SPY-CHOICE
+Please provide a valid player name.
+
+CANNOT-KILL-YOURSELF
+You cannot kill yourself!
+
+CANNOT-KILL-DEAD
+That person is already dead.
 
 NOT-SEER
 You are not the Doctor!
@@ -212,28 +376,13 @@ A quick scan of PLAYER's gutted corpse shows that they are both dead and human.
 TALLY
 Tallying Votes...
 
-TIE
-A tie. Randomly choosing one...
-
 DYING-BREATH
 You are allowed a single line as your dying breath.
 
 CHEAT-KICK
 Decomissioned for unbecoming behaviour for a Starfleet officer
 
-BORED
-I'm bored. Anyone else bored?
-Someone type !start. I implore you!
-You know, there's a great game in this channel...
-WAFFLES
-PLAYER finds a shortcut! This wondrous godsend brings them RANDDUR closer to level RANDNUM. Oh, wait, this isn't #idle...
-*yawn*
-Anyone can start a game if they like.
-How about a nice quick game of me?
-Betcha scared of losing. That's why you won't play.
-Wow. Didn't think people were this boring...
-A lynch a day keeps the murderous tendancies away. *nods*
-It's so easy... Happy go-oh lucky...
-Rowr. That's the sound of a werewolf. I thought I'd just remind you.
+GENERIC-ERROR-PVM-MESSAGE
+Sorry, I cannot answer that at the moment. Either it's not the right time or it's a wrong command (check your spelling)
 
 #end of file

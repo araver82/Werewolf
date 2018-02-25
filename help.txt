@@ -1,0 +1,139 @@
+STARTGAMECOMMANDS
+HOWTOGEN List of starting commands (and which game they start): !spymafia (4-Spy Mafia)(NEW), !start (for Plain Mafia), !wolfgame (for Original Wolfgame), !star-trek (for StarTrek variant of the Original Wolfgame). Type !rules to see the current rules. Type !howto GAMENAME to see each game's rules.
+
+CHANCOMMANDS
+HOWTOGEN List of channel commands (Channel OPs only) (Use !COMMANDS [OPTIONS]): !quit, !stop, !daytime ( x ), !nighttime ( x ), !votetime ( x ), !jointime ( x ), !remindertime ( x ), !tie (on/off), !changevote (on/off), !roster (on/off), !firstdaytielynch (on/off), !shush or !speak.
+
+PRVCOMMANDS
+HOWTOGEN List of PM commands (PM me or type /msg <botname> COMMAND [OPTIONS]): join, vote <player>, voteno <number>, removevote, abstain, finalvote, finalvote <player>, finalvoteno <number>, nocontest, showvotes, kill <player>, killno <number>, spy <player>, spyno <number>, alive, role.
+
+HELPCOMMANDSTYPE
+HOWTOGEN Type !howto COMMAND to see help on a specific COMMAND.
+
+COMMANDSTART
+!start - Starts plain Mafia game with current rules. There is 1 Baddie (for 5-7 players) or 2 Baddies (for 8-12 players) and a Spy. The rest of the players are Goodies with no special abilities. Each night Baddies kill one player and the Spy can spy a player to see if he is a Baddie. 
+
+COMMANDSTARTDESCRIPTION
+Each day all alive players vote for one of them to be lynched. Baddies win the game if they are equal to the number of Goodies (including the Spy). Goodies win if they lynch all the baddies.
+
+COMMANDWEREWOLF
+!wolfgame - Starts a Werewolf original game (5-12 players) with current rules. There are 1 (5-7 players) or 2 (8-12 players) Wolves and a Seer. 
+
+COMMANDWEREWOLFDESCRIPTION
+The rest of the players are Villagers. Each night Wolves kill one player and the Seer can see if a player is Wolf. Each day all alive players vote for one of them to be lynched. Wolves win the game if they are equal to the number of Villagers (including the Seer). Villagers (including the Seer) win if they lynch all the wolves.
+
+COMMANDSTARTREK
+!star-trek - Starts a StarTrek variant game (5-12 players). Secret Star Trek Mode - Redshirts vs. Tribbles aboard an abandoned vessel. There are 1 (for 5-7 players) or 2 (for 8-12 players) Tribbles and a Doctor. The rest of the players are RedShirts. 
+
+COMMANDSTARTREKDESCRIPTION
+Each night Tribbles kill one player and the Doctor can use his medical tricorder to see if a player is a Tribble. Each day all alive players vote for one of them to be lynched. Tribbles win the game if they are equal to the number of Cadets (Redshirts and Doctor). Cadets win if they lynch all the Tribbles.
+
+COMMANDSPYMAFIA
+!spymafia - Starts a 5 player Spy Mafia game. 1 player is a Baddie, the other 4 players are Goodies. Each Goodie is (unknown to them) one of the following 4 types of spy: PARANOID (thinks everybody is a Baddie), NAIVE (thinks everybody is a Goodie), INSANE (spies Baddies as Goodies and Goodies as Baddies) and SANE (spy results are correct). Each spy type is represented exactly once.
+
+COMMANDSSPYMAFIADESCRIPTION 
+Each night the Baddie can kill 1 player and each Goodie can spy an alive person (including themselves). Each day all alive players vote for one of them to be lynched. Baddies win the game if they are equal to the number of Goodies. Goodies win if they lynch all the baddies.
+
+COMMANDRULES
+HOWTO !rules - Shows the current set of rules
+
+COMMANDQUIT
+HOWTO !quit - (Channel OPs only) Make <botname> leave the channel.
+
+COMMANDSTOP
+HOWTO !stop - (Channel OPs only) Make <botname> stop the game.
+
+COMMANDDAYTIME
+HOWTO !daytime ( x ) - (Channel OPs only) Determines the length in seconds of the day, when people can discuss suspicions etc. If no argument is provided, if gives the current duration.
+
+COMMANDNIGHTTIME
+HOWTO !nighttime ( x ) - (Channel OPs only) Determines the length in seconds of the night, when the werewolf/wolves select their victim and the Seer selects who to view. If no argument is provided, if gives the current duration.
+
+COMMANDVOTETIME
+HOWTO !votetime ( x ) - (Channel OPs only) Determines the length in seconds of the Lynch Vote, when people cast their votes on who should be lynched. If no argument is provided, if gives the current duration.
+
+COMMANDJOINTIME
+HOWTO !jointime ( x ) - (Channel OPs only) Determines the length in seconds of the joining period, when people can join the game with the private command join. If no argument is provided, if gives the current duration.
+
+COMMANDREMINDERTIME
+HOWTO !remindertime ( x ) - (Channel OPs only) Determines the length in seconds between each reminder of the time left to join / discuss / vote / act at night. Set above day/night/vote/join times to disable any reminders. If no argument is provided, if gives the current duration.
+
+COMMANDTIE
+HOWTO !tie (on/off) - (Channel OPs only) Activates or deactivates the Lynch Tie rule. If the tie is activated and there are an equal number of votes for 2 or more players during the Lynch Vote, one of them will be randomly selected. Otherwise, no-one will be lynched. If no argument is provided, it gives the current status of the flag.
+
+COMMANDFIRSTDAYTIELYNCH
+HOWTO !firstdaytielynch (on/off) - (Channel OPs only) Activates or deactivates the first day Lynch Tie rule. If the tie is activated and there are an equal number of votes for 2 or more players during the first day Lynch Vote, one of them will be randomly selected. Otherwise, no-one will be lynched. If no argument is provided, it gives the current status of the flag.
+
+COMMANDCHANGEVOTE
+HOWTO !changevote (on/off) - (Channel OPs only) Activates or deactivates the rule allowing changing voting. If no argument is provided, it gives the current status of the flag.
+
+COMMANDROSTER
+HOWTO !roster (on/off) - (Channel OPs only) Activates or deactivates the display of the current roster. If no argument is provided, it gives the current status of the flag.
+
+COMMANDSHUSH
+HOWTO !shush - Disable Idle chat from the bot
+
+COMMANDSPEAK
+HOWTO !speak - Enable Idle chat from the bot
+
+COMMANDJOIN
+HOWTOPRV /msg <botname> join - Joins the game during the game joining period. 
+
+COMMANDVOTE
+HOWTOPRV /msg <botname> vote <player> - Casts a vote for the chosen player during the Lynch Vote. The player with the majority vote will be lynched. If there is a tie, refer to the !tie command. Votes can be changed only if allowed by the "change vote" rule.
+
+COMMANDVOTENO
+HOWTOPRV /msg <botname> voteno <number in roster> - Casts a vote for the player with chosen number in the roster during the Lynch Vote. Acts like voting a player's name, except you don't have to write the player' nick, just the number in the roster.
+
+COMMANDREMOVEVOTE
+HOWTOPRV /msg <botname> removevote - Removes your current vote if allowed by changeVote rule.
+
+COMMANDABSTAIN
+HOWTOPRV /msg <botname> abstain - Choose not to vote (abstain). If allowed by changeVote rule, you can change your mind about abstaining.
+
+COMMANDFINALVOTE
+HOWTOPRV /msg <botname> finalvote - Marks your vote as FINAL - No changes can be made to the vote.
+
+COMMANDFINALVOTENAME
+HOWTOPRV /msg <botname> finalvote <player> - Casts a vote for the chosen player during the Lynch Vote and marks your vote as FINAL - No changes can be made to the vote.
+
+COMMANDFINALVOTENO
+HOWTOPRV /msg <botname> finalvoteno <number in roster> - Casts a vote for the player with chosen number in the roster during the Lynch Vote and marks your vote as FINAL - No changes can be made to the vote.
+
+COMMANDNOCONTEST
+HOWTOPRV /msg <botname> nocontest - Plead no contest and get lynched ;)
+
+COMMANDSHOWVOTES
+HOWTOPRV /msg <botname> showvotes - Shows the roster with current voting if allowed by roster display rule.
+
+COMMANDKILL
+HOWTOPRV /msg <botname> kill <player> - Only Baddies/Werewolves may use this command at night. Selects a victim for the Baddie/werewolf to kill during the night.
+
+COMMANDKILLNO
+HOWTOPRV /msg <botname> killno <number in roster> - Only Baddies/Werewolves may use this command at night. Selects a victim by their roster number for the Baddie/werewolf to kill during the night.
+
+COMMANDSEE
+HOWTOPRV /msg <botname> see <player> - Only the Spy/Seer may use this command at night. Selects a player, whose identity (Goodie or Baddie) will be revealed to the Spy/Seer the following morning.
+
+COMMANDSEENO
+HOWTOPRV /msg <botname> seeno <number in roster> - Only the Spy/Seer may use this command at night. Selects a player, by their roster number. Their identity (Goodie or Baddie) will be revealed to the Spy/Seer the following morning.
+
+COMMANDSPY
+HOWTOPRV /msg <botname> spy <player> - Only the Spy/Seer may use this command at night. Selects a player, whose identity (Goodie or Baddie) will be revealed to the Spy/Seer the following morning.
+
+COMMANDSPYNO
+HOWTOPRV /msg <botname> spyno <number in roster> - Only the Spy/Seer may use this command at night. Selects a player, by their roster number. Their identity (Goodie or Baddie) will be revealed to the Spy/Seer the following morning.
+
+COMMANDALIVE
+HOWTOPRV /msg <botname> alive - Provides a list of all players that are still alive in the current game.
+
+COMMANDROLE
+HOWTOPRV /msg <botname> role - Reminds the player of what his role in the game is.
+
+MMBOT-OUT
+MMBot - Mafia Game Bot v0.6 adapted by Araver for http://forum.mafiamaniac.net/. Based on the Werewolf Game Bot v0.99 created by LLamaBoy. Based on the PircBot at http://www.jibble.org/
+
+MMBOT-OUT-ACKNOWLEDGE
+OK, Boss, quitting now...
+
+#end of file

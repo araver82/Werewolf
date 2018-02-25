@@ -1,5 +1,6 @@
 #Java Werewolf Game game text file.
 #Texts written by Darkshine.
+#updated by Araver for MMBot
 
 1-WOLF
 Werewolf
@@ -16,14 +17,32 @@ Seer
 ROLE-VILLAGER
 Villager
 
+NOGAME-IN-PROGRESS
+Sorry, no game is in progress. Type !start to start a game or !howto to see the commands.
+
+NOT-PLAYING
+Sorry, but you're not playing. Please wait for this game to finish.
+
+GAME-HAS-STOPPED
+Game has been stopped. Sorry, but PLAYER is the boss!
+
+GAME-IS-NOT-ON
+There's no game on! Are you trying to confuse me Boss?
+
 STARTGAME
 PLAYER has started a game. Everyone else has TIME seconds to join in the mob. '/msg BOTNAME join' to join the game."
 
 STARTGAME-NOTICE
 PLAYER has started a game!
 
+GAME-IS-FULL
+Enough people have joined the game.
+
 ADDED
 Added to the game. Your role will be given once registration elapses.
+
+ADD-FAILED
+Could not add you to player list. Please try again.
 
 GAME-STARTED
 A game has been started! '/msg BOTNAME join' to join!
@@ -33,6 +52,9 @@ A game is currently underway. Please wait for it to finish before attempting to 
 
 NOT-ENOUGH
 Sorry, not enough people to make a valid mob.
+
+ALREADY-PLAYING
+You are already on the player list.
 
 ADD-PRIORITY
 Adding priority players...
@@ -49,6 +71,12 @@ Duration of the night now set to TIME seconds.
 VOTECHANGE
 Duration of the Lynch Vote now set to TIME seconds.
 
+JOINCHANGE
+Duration of the join time now set to TIME seconds.
+
+REMINDERCHANGE
+Duration of the reminder interval is now set to TIME seconds.
+
 JOIN
 PLAYER has joined the hunt.
 
@@ -62,71 +90,113 @@ FLEE-WOLF
 PLAYER has fled. They were a Wolf.
 
 FLEE-PRIORITY
-PLAYER has fled. PLAYR2 has taken his place.
+PLAYER has fled. PLAYR2 has taken their place.
 
 FLEE-PRIORITY-NOTICE
-PLAYER has left the game. You are to take his place.
+PLAYER has left the game. You are to take their place.
 
 DAYTIME
 Villagers, you have TIME seconds to discuss suspicions, or cast accusations, after which time a lynch vote will be called.
 
 VOTETIME
-Villagers, you now have TIME seconds to vote for the person you would like to see lynched! Type '/msg BOTNAME vote <player>' to cast your vote. Votes are non retractable!
+Villagers, you now have TIME seconds to vote for the person you would like to see lynched! Type '/msg BOTNAME vote <player>' or '/msg BOTNAME voteno <player number on roster>' to cast your vote. You can choose to not vote with '/msg BOTNAME abstain'. Votes are non retractable - all votes are final! 
+
+VOTETIMECHANGEALLOWED
+Villagers, you now have TIME seconds to vote for the person you would like to see lynched! Type '/msg BOTNAME vote <player>' or '/msg BOTNAME voteno <player number on roster>' to cast your vote. You can choose to not vote with '/msg BOTNAME abstain'. You can remove your vote with '/msg BOTNAME removevote'! After you vote, you can mark your vote as final '/msg BOTNAME finalvote' - no changes will be allowed afterwards. 
+
+TIEFIRSTDAY-RANDOMLYNCH
+This is the first day. If the vote is tied, one random player in the tie will be lynched.
+
+TIEFIRSTDAY-NOLYNCH
+This is the first day. If the vote is tied, no one will be lynched.
+
+TIEANYDAY-RANDOMLYNCH
+Remember, if the vote is tied, one random player in the tie will be lynched.
+
+TIEANYDAY-NOLYNCH
+Remember, if the vote is tied, no one will be lynched.
+
+MAJORITY-ABSTAIN-WINS
+If at least TIME players choose to abstain then there will be no lynch today!
+
+REMINDER-JOINTIME
+REMINDER: Joining ends in TIME seconds! Hurry!
+
+REMINDER-DAYTIME
+REMINDER: Lynch vote will start in TIME minutes!
+
+REMINDER-VOTETIME
+REMINDER: Vote will end in TIME minutes!
+
+REMINDER-NIGHTTIME
+REMINDER: Night will end in TIME minutes!
+
+HAS-ABSTAINED
+PLAYER has chosen to abstain.
+
+HAS-FINALIZED
+PLAYER has finalized their vote.
+
+HAS-REMOVED-ABSTAIN
+PLAYER has renounced their abstain vote.
 
 HAS-VOTED
 PLAYER has voted for PLAYR2!
 
+HAS-REMOVED-VOTE
+PLAYER has removed their vote.
+
+VOTE-INSTRUCTIONS
+Please vote in the correct format: /msg BOTNAME vote <player> or /msg BOTNAME voteno <player number on roster> or 
+/msg BOTNAME abstain or /msg BOTNAME finalvote or /msg BOTNAME finalvote <player> or /msg BOTNAME finalvoteno <number> or /msg BOTNAME nocontest.
+
+ALREADY-FINALIZED-VOTE
+You've finalized your vote for today. Wait for the lynch to finish.
+
+ALREADY-FINAL-VOTE
+Votes automatically count as final as you cannot change your vote. Stop confusing me :P
+
+ALREADY-VOTED
+You've already voted today. You cannot change your vote and you may not vote again until tomorrow.
+
+ALREADY-ABSTAIN
+You've already told me you want to abstain. Stop confusing me :P
+
+HAVE-NOT-VOTED-YET
+You have not voted yet. Vote first, then tell me it's final. And stop confusing me :P
+
+HAVE-NOT-VOTED-BEFORE
+Nothing to remove as you have not voted yet. Stop confusing me :P
+
+CANNOT-VOTE-CHOICE
+Your choice is not valid.
+
+CANNOT-VOTE-DEAD
+You cannot vote. You are dead.
+
+CANNOT-VOTE-DEAD-PEOPLE
+You cannot vote dead people. They are already dead!
+
+CANNOT-REMOVE-VOTE
+You cannot remove your vote!
+
+CHOICE-NOT-PLAYING
+Your choice is not playing in the current game. Please select someone else.
+
+ALL-VOTES-IN
+All the votes are in! A decision will be made shortly.
+
+ALL-VOTES-FINAL
+All the votes are final! A decision will be made shortly.
+
+PLAYER-HAS-PLEADED-NO-CONTEST
+PLAYER has pleaded "No contest!". All votes are cast on him!
+
 NO-VOTES
 Nobody voted! The Powers of Good will not like this apparent support for the werewolves...
 
-FIRSTNIGHT
-Night descends on the sleepy village, and a full moon rises. Unknown to the villagers, tucked up in their warm beds, the early demise of one of their number is being plotted.
-
-NIGHTTIME
-As the moon rises, the lynching mob dissipates, return to their homes and settle into an uneasy sleep. But in the pale moonlight, something stirs...
-
-WOLF-INSTRUCTIONS
-WOLF, you have TIME seconds to decide who to attack. To make your final decision type '/msg BOTNAME kill <player>'
-
-WOLVES-INSTRUCTIONS
-WOLF, you have TIME seconds to confer via PM and unanimously decide who to attack. To make your final decision type '/msg BOTNAME kill <player>'
-
-SEER-INSTRUCTIONS
-Seer, you have TIME seconds to PM one name to BOTNAME and discover their true intentions. To enquire with the spirits type '/msg BOTNAME see <player>'
-
-WOLF-CHOICE
-You have chosen PLAYER to feast on tonight.
-
-WOLVES-CHOICE
-You have chosen PLAYER to feast on tonight. We shall see who your brethren selects...
-
-WOLVES-CHOICE-OTHER
-PLAYER has chosen to kill PLAYR2.
-PLAYR2 is PLAYER's choice of victim this night.
-
-VILLAGER-ROLE
-You are a peaceful peasant turned vigilante, a Villager! You must root out the WOLF by casting accusations or protesting innocence at the daily village meeting, and voting who you believe to be untrustworthy during the daily Lynch Vote. Good luck!
-
-V-ROLE
-You are a Villager.
-
-WOLF-ROLE
-You are a prowler of the night, a Werewolf! You must decide your nightly victims. By day you must deceive the villager and attempt to blend in. Keep this information to yourself! Good luck!
-
-W-ROLE
-You are a Werewolf.
-
-WOLVES-ROLE
-You are a prowler of the night, a Werewolf! Your fellow Werewolf is PLAYER. You must confer with them via PM to decide your nightly victims. By day you must deceive the villager and attempt to blend in. Keep this information to yourself! Good luck!
-
-WS-ROLE
-You are a Werewolf. Your counterpart is PLAYER.
-
-SEER-ROLE
-You are one granted the gift of second sight, a Seer! Each night you may enquire as to the nature of one of your fellow village dwellers, and WereBot will tell you whether or not that person is a Werewolf - a powerful gift indeed! But beware revealing this information to the WOLF, or face swift retribution!
-
-S-ROLE
-You are the Seer.
+ABSTAIN-NO-LYNCH
+At least half of alive players have voluntarily abstained. No one is getting lynched today!
 
 LYNCH-LEFT
 The guilty party has left, no lynching.
@@ -146,6 +216,73 @@ PLAYER, the ROLE, is lynched!
 
 NO-LYNCH
 As the sun gets low in the sky, the villagers are unable to reach a decision on who to lynch, and without the momentum of a united mob, the crowd slowly dissipates to take shelter in their homes...
+
+TIE-NO-LYNCH
+As the sun gets low in the sky, the villagers are unable to reach a decision on who to lynch. A tie is reached and the crowd slowly dissipates to take shelter in their homes...
+
+TIE
+As the sun gets low in the sky, the villagers are unable to reach a decision on who to lynch - a tie is reached. According to the rules, a coinflip will decide today's lynch...
+
+ROSTER-DISPLAY-OFF-NOTICE
+Roster display is not on. It can be turned on by an OP after the game is finished!
+
+ROSTER-DISPLAY-PROBLEM
+Unknown problem showing the roster. Sorry!
+
+SEPARATOR
+-------------------------------------
+
+FIRSTNIGHT
+Night descends on the sleepy village, and a full moon rises. Unknown to the villagers, tucked up in their warm beds, the early demise of one of their number is being plotted.
+
+NIGHTTIME
+As the moon rises, the lynching mob dissipates, return to their homes and settle into an uneasy sleep. But in the pale moonlight, something stirs...
+
+WOLF-INSTRUCTIONS
+WOLF, you have TIME seconds to decide who to attack. To make your final decision type '/msg BOTNAME kill <player>' or '/msg BOTNAME killno <number>'.
+
+WOLVES-INSTRUCTIONS
+WOLF, you have TIME seconds to confer via PM and unanimously decide who to attack. To make your final decision type '/msg BOTNAME kill <player>' or '/msg BOTNAME killno <number>'.
+
+SEER-INSTRUCTIONS
+Seer, you have TIME seconds to PM one name to BOTNAME and discover their true intentions. To enquire with the spirits type '/msg BOTNAME see <player>' or '/msg BOTNAME seeno <number>'
+
+WOLF-CHOICE
+You have chosen PLAYER to feast on tonight.
+
+WOLVES-CHOICE
+You have chosen PLAYER to feast on tonight. We shall see who your brethren selects...
+
+WOLF-WRONG-CHOICE
+Please choose a valid player.
+
+WOLVES-CHOICE-OTHER
+PLAYER has chosen to kill PLAYER2.
+PLAYER2 is PLAYER's choice of victim this night.
+
+VILLAGER-ROLE
+You are a peaceful peasant turned vigilante, a Villager! You must root out the WOLF by casting accusations or protesting innocence at the daily village meeting, and voting who you believe to be untrustworthy during the daily Lynch Vote. Good luck!
+
+V-ROLE
+REMINDER: You are a Villager.
+
+WOLF-ROLE
+You are a prowler of the night, a Werewolf! You must decide your nightly victims. By day you must deceive the villager and attempt to blend in. Keep this information to yourself! Good luck!
+
+W-ROLE
+REMINDER: You are a Werewolf.
+
+WOLVES-ROLE
+You are a prowler of the night, a Werewolf! Your fellow Werewolf is PLAYER. You must confer with them via PM to decide your nightly victims. By day you must deceive the villager and attempt to blend in. Keep this information to yourself! Good luck!
+
+WS-ROLE
+REMINDER: You are a Werewolf. Your counterpart is PLAYER.
+
+SEER-ROLE
+You are one granted the gift of second sight, a Seer! Each night you may enquire as to the nature of one of your fellow village dwellers, and WereBot will tell you whether or not that person is a Werewolf - a powerful gift indeed! But beware revealing this information to the WOLF, or face swift retribution!
+
+S-ROLE
+REMINDER: You are the Seer.
 
 VILLAGER-KILL
 The villagers gather the next morning in the village center, but PLAYER does not appear. The villagers converge on PLAYER's home and find them decapitated in their bed. After carrying the body to the church, the villagers, now hysterical, return to the village center to decide how to retaliate...
@@ -192,11 +329,38 @@ The Werewolves were:
 SEER-DEAD
 Your link to the living in death is not as great as your link to the dead in life.
 
+WOLF-DEAD
+You are dead and can no longer help the Werewolves win.
+
 NOT-WOLF
 You are not a Werewolf!
 
+ALIVE-TEXT
+The players left alive are: 
+
 WILL-SEE
 You will see the identity of PLAYER upon the dawning of tomorrow.
+
+CANNOT-SPY-WOLF
+You cannot see. Nice try :P
+
+CANNOT-SPY-DEAD-PEOPLE
+You cannot see who dead people were. Choose someone else.
+
+CANNOT-SPY-YOURSELF
+You already know who you are! You are a Seer!
+
+CANNOT-SPY-BYSTANDERS
+That person is not playing.
+
+CANNOT-SPY-CHOICE
+Please provide a valid player name.
+
+CANNOT-KILL-YOURSELF
+You cannot kill yourself!
+
+CANNOT-KILL-DEAD
+That person is already dead.
 
 NOT-SEER
 You are not the Seer!
@@ -213,28 +377,25 @@ The spirits needn't have guided your sight tonight; Your target was also that of
 TALLY
 Tallying Votes...
 
-TIE
-A tie. Randomly choosing one...
-
 DYING-BREATH
 You are allowed a single line as your dying breath.
 
 CHEAT-KICK
 No quoting me, cheater.
 
+GENERIC-ERROR-PVM-MESSAGE
+Sorry, I cannot answer that at the moment. Either it's not the right time or it's a wrong command (check your spelling)
+
 BORED
 I'm bored. Anyone else bored?
 Someone type !start. I implore you!
-You know, there's a great game in this channel...
-WAFFLES
-PLAYER finds a shortcut! This wondrous godsend brings them RANDDUR closer to level RANDNUM. Oh, wait, this isn't #idle...
+You know, there are some great games in this channel ... Just type !howto and find out.
 *yawn*
 Anyone can start a game if they like.
-How about a nice quick game of me?
-Betcha scared of losing. That's why you won't play.
+How about a nice quick game of me? ... I mean Wolfgame.
+Betcha y'all scared of losing. That's why you won't play. :P
 Wow. Didn't think people were this boring...
 A lynch a day keeps the murderous tendancies away. *nods*
-It's so easy... Happy go-oh lucky...
 Rowr. That's the sound of a werewolf. I thought I'd just remind you.
 
 #end of file

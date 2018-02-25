@@ -1,3 +1,106 @@
+MMBot release 0.6 (Araver)
+--------------------------------
+Changes in gameplay:
+- removed colors and formatting from incoming public and private messages
+- removed lower/Uppercase from incoming public and private message checking
+- finish joining after MAXPLAYERS=12 (or 5 for SpyMafia) join
+- prints roster after joining, beginning of each night (to see alive players) and after lynch results.
+- added commands finalvote <player> and finalvoteno <number>
+- added commands killno, spyno, seeno
+- added first-day tie rule (separate from tie rule)
+- added messages on vote-starting on how ties are going
+- added new vote tallying system (for SpyMafia ONLY): If at least half of the people alive are abstaining then no one gets lynched.
+
+Changes in help file/messages:
+- Replaced underconstruction in help for SpyMafia
+- Recolored help and reorganized game descriptions.
+- Added help for new commands: killno, spyno, seeno, finalvote X and finalvoteno N
+- Updated seer/spy/wolf night-instructions with updated commands (killno, seeno, spyno)
+- fixed baddie night-instructions
+- merged spymafia and plainmafia messages in a single text-file
+- update wolfgame/startrek game files with missing texts
+
+Bugfixes:
+- fixed problem with nighttime reminder
+
+Future plans: 
+- new texts for day and night-posts.
+
+MMBot release 0.5 (Araver)
+--------------------------------
+Changes:
+- cache game and help texts from file
+- !stop - to stop a game in progress
+- added game descriptions to the help file
+- !spymafia - Hirk's 4 Spy-game
+- messages "Lynched and found to be ..." / "Killed by Baddies"
+
+Bugfixes:
+- stopped spamming NickServ and WikkedWire on join >_>
+
+Future plans: 
+1. Replace underconstruction in help
+2. Color !spymafia in help
+3. Baddies instructions also think there are more wolves :( problem with wolves-vector.
+4. Truncated spymafia description :(
+5. Seer instructions - write spy player instead of see player
+6. Roster before start of game if first-night. Better yet, roster after joining ends.
+7. Majority rules, ties go to the abstains! - new tallyvote system for SpyMafia.
+8. Finish joining after 5 join
+9. Night reminder doesn't work!
+10. killno and spyno
+11. finalvote X
+12. Separate first-day tie rule
+
+MMBot release 0.4 (Araver)
+--------------------------------
+Changes:
+- changed !help to !howto
+
+Future plans: 
+- !stop - to stop a game in progress
+- cache texts from file
+- !mafia - Hirk's 4 Spy-game
+- messages "Lynched and found to be ..." / "Killed by Baddies"
+
+MMBot release 0.3 (Araver)
+--------------------------------
+Changes:
+- added private command - abstain a.k.a. NO VOTE
+- added private command - voteno <No> to vote a number on the roster (as opposed to the whole name)
+- added private command - finalvote - to mark vote as final and not changeable anymore
+- added reminders for day/night "Vote will end in ..."
+- check votes for final and end day early if all votes are final
+- added round number and daypost / nightpost / action result separator!
+- plead no contest ability
+- reminder every minute
+
+Bugfixes:
+- fixed problem with spying dead people
+- fixed problem with diplaying minutes
+
+MMBot release 0.2 (Araver)
+--------------------------------
+Changes:
+- added joinTime to the list of run-time customed timers (default 2 minutes now)
+
+Bugfixes:
+- fixed problems with his/her in text files.
+- fixed problem with case sensitive vote names appearing on roster.
+
+MMBot release 0.1 (Araver)
+--------------------------------
+Changes:
+- added help (!help)
+- added rosterDisplay
+- added changeVote rule
+- added removeVote possibility
+- added nice colors for votes in roster :D
+- added possibility to invoke roster (seevotes)
+- changed default text file to Mafia Goodie / Baddie / spy.
+
+Werewolf 0.99 original WhatsNew
+--------------------------------
 From 0.97b release:
 Changes:
 -Bot now reads texts from files.

@@ -1,13 +1,30 @@
 This is a fork of the Werewolf IRC Game found @ http://javatwg.sourceforge.net/
 
-This version includes the following bug and game play fixes:
-* Requires only 4 players to play.
-* Will always start with a night rather than a voting day.
-* Fixed the 'can't vote/kill/see' bug that was caused by improper extra spaces removal.
-* The Bot will now show who the other wolf chose as a victem to his/her brother wolf in a two werewolve game rather than the cryptic 'PLAYER2'.
+This version has 4 different games (Werewolf, Star Trek, 4-Spy Mafia) each with it's separate file containing messages:
+* !spymafia (4-Spy Mafia)(NEW)
+* !start (for Plain Mafia)
+* !wolfgame (for Original Wolfgame)
+* !star-trek (for StarTrek variant of the Original Wolfgame)
 
-That's pretty much it for now.
+Changes in gameplay:
+* prints roster after joining, beginning of each night (to see alive players) and after lynch results.
+* finish joining after MAXPLAYERS=12 (or 5 for SpyMafia) join
+* added new vote tallying system (for SpyMafia ONLY): If at least half of the people alive are abstaining then no one gets lynched.
+* added command abstain aka NO LYNCH
+* added command finalvote - to mark vote as final and not changeable anymore
+* check votes for final and end day early if all votes are final
+* added commands voteno, killno, spyno, seeno, finalvoteno - to act on a roster position instead of typing a player name
+* added first-day tie rule (separate from tie rule) and added messages on vote-starting on how ties are going
+* added messages "Lynched and found to be ..." / "Killed by Baddies"
+* added reminders for day/night "Vote will end in ..."
+* added round number and daypost / nightpost / action result separator!
+* added plead no contest ability
+* added joinTime to the list of run-time customed timers (default 2 minutes now)
+* added rosterDisplay
+* added changeVote rule
+* added removeVote possibility
+* added possibility to invoke roster (seevotes)
+* changed default text file to Mafia Goodie / Baddie / spy.
 
-I included my start script for Unix based servers named run.sh and you can also modify the code of the bot in src and compile and install it with compile.sh
-
-Happy Hunting!
+Config
+* Edit the mmbot.ini options for server, channel, password, etc.

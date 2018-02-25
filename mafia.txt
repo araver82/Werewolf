@@ -1,0 +1,405 @@
+#Java PlainMafia texts 
+#Also contains texts for 4-SpyMafia texts.
+#Texts updated by Araver for MafiaManiac.
+
+1-WOLF
+Baddie
+
+MANY-WOLVES
+Baddies
+
+ROLE-WOLF
+Baddie
+
+ROLE-SEER
+Spy
+
+ROLE-VILLAGER
+Goodie
+
+NOGAME-IN-PROGRESS
+Sorry, no game is in progress. Type !start or !spymafia to start a game or !howto to see the commands.
+
+NOT-PLAYING
+Sorry, but you're not playing. Please wait for this game to finish.
+
+GAME-HAS-STOPPED
+Game has been stopped. Sorry, but PLAYER is the boss!
+
+GAME-IS-NOT-ON
+There's no game on! Are you trying to confuse me Boss?
+
+STARTGAME
+PLAYER has started a game. Everyone else has TIME seconds to join in the mob. '/msg BOTNAME join' to join the game.
+
+STARTGAME-NOTICE
+PLAYER has started a game!
+
+GAME-IS-FULL
+Enough people have joined the game.
+
+ADDED
+Added to the game. Your role will be given once registration elapses.
+
+ADD-FAILED
+Could not add you to player list. Please try again.
+
+GAME-STARTED
+A game has been started! '/msg BOTNAME join' to join!
+
+GAME-PLAYING
+A game is currently underway. Please wait for it to finish before attempting to join.
+
+NOT-ENOUGH
+Sorry, not enough people to make a valid mob.
+
+ALREADY-PLAYING
+You are already on the player list.
+
+ADD-PRIORITY
+Adding backup players...
+
+TWOWOLVES
+THERE ARE 2 BADDIES IN THIS GAME.
+
+DAYCHANGE
+Duration of the day now set to TIME seconds.
+
+NIGHTCHANGE
+Duration of the night now set to TIME seconds.
+
+VOTECHANGE
+Duration of the Lynch Vote now set to TIME seconds.
+
+JOINCHANGE
+Duration of the join time now set to TIME seconds.
+
+REMINDERCHANGE
+Duration of the reminder interval is now set to TIME seconds.
+
+JOIN
+PLAYER has joined the game.
+
+FLEE
+PLAYER has fled.
+
+FLEE-VILLAGER
+PLAYER has fled. 
+
+FLEE-WOLF
+PLAYER has fled. 
+
+FLEE-PRIORITY
+PLAYER has fled. PLAYR2 has taken their place.
+
+FLEE-PRIORITY-NOTICE
+PLAYER has left the game. You are to take their place.
+
+DAYTIME
+Goodies, you have TIME seconds to discuss suspicions, or cast accusations, after which time a lynch vote will be called.
+
+VOTETIME
+Goodies, you now have TIME seconds to vote for the person you would like to see lynched! Type '/msg BOTNAME vote <player>' or '/msg BOTNAME voteno <player number on roster>' to cast your vote. You can choose to not vote with '/msg BOTNAME abstain'. Votes are non retractable - all votes are final! 
+
+VOTETIMECHANGEALLOWED
+Goodies, you now have TIME seconds to vote for the person you would like to see lynched! Type '/msg BOTNAME vote <player>' or '/msg BOTNAME voteno <player number on roster>' to cast your vote. You can choose to not vote with '/msg BOTNAME abstain'. You can remove your vote with '/msg BOTNAME removevote'! After you vote, you can mark your vote as final '/msg BOTNAME finalvote' - no changes will be allowed afterwards. 
+
+TIEFIRSTDAY-RANDOMLYNCH
+This is the first day. If the vote is tied, one random player in the tie will be lynched.
+
+TIEFIRSTDAY-NOLYNCH
+This is the first day. If the vote is tied, no one will be lynched.
+
+TIEANYDAY-RANDOMLYNCH
+Remember, if the vote is tied, one random player in the tie will be lynched.
+
+TIEANYDAY-NOLYNCH
+Remember, if the vote is tied, no one will be lynched.
+
+MAJORITY-ABSTAIN-WINS
+If at least TIME players choose to abstain then there will be no lynch today!
+
+REMINDER-JOINTIME
+REMINDER: Joining ends in TIME seconds! Hurry!
+
+REMINDER-DAYTIME
+REMINDER: Lynch vote will start in TIME minutes!
+
+REMINDER-VOTETIME
+REMINDER: Vote will end in TIME minutes!
+
+REMINDER-NIGHTTIME
+REMINDER: Night will end in TIME minutes!
+
+HAS-ABSTAINED
+PLAYER has chosen to abstain.
+
+HAS-FINALIZED
+PLAYER has finalized their vote.
+
+HAS-REMOVED-ABSTAIN
+PLAYER has renounced their abstain vote.
+
+HAS-VOTED
+PLAYER has voted for PLAYR2!
+
+HAS-REMOVED-VOTE
+PLAYER has removed their vote.
+
+VOTE-INSTRUCTIONS
+Please vote in the correct format: /msg BOTNAME vote <player> or /msg BOTNAME voteno <player number on roster> or /msg BOTNAME abstain or /msg BOTNAME finalvote or /msg BOTNAME finalvote <player> or /msg BOTNAME finalvoteno <number> or /msg BOTNAME nocontest.
+
+ALREADY-FINALIZED-VOTE
+You've finalized your vote for today. Wait for the lynch to finish.
+
+ALREADY-FINAL-VOTE
+Votes automatically count as final as you cannot change your vote. Stop confusing me :P
+
+ALREADY-VOTED
+You've already voted today. You cannot change your vote and you may not vote again until tomorrow.
+
+ALREADY-ABSTAIN
+You've already told me you want to abstain. Stop confusing me :P
+
+HAVE-NOT-VOTED-YET
+You have not voted yet. Vote first, then tell me it's final. And stop confusing me :P
+
+HAVE-NOT-VOTED-BEFORE
+Nothing to remove as you have not voted yet. Stop confusing me :P
+
+CANNOT-VOTE-CHOICE
+Your choice is not valid.
+
+CANNOT-VOTE-DEAD
+You cannot vote. You are dead.
+
+CANNOT-VOTE-DEAD-PEOPLE
+You cannot vote dead people. They are already dead!
+
+CANNOT-REMOVE-VOTE
+You cannot remove your vote!
+
+CHOICE-NOT-PLAYING
+Your choice is not playing in the current game. Please select someone else.
+
+ALL-VOTES-IN
+All the votes are in! A decision will be made shortly.
+
+ALL-VOTES-FINAL
+All the votes are final! A decision will be made shortly.
+
+PLAYER-HAS-PLEADED-NO-CONTEST
+PLAYER has pleaded "No contest!". All votes are cast on him!
+
+NO-VOTES
+Nobody voted! 
+
+ABSTAIN-NO-LYNCH
+At least half of alive players have voluntarily abstained. No one is getting lynched today!
+
+LYNCH-LEFT
+The guilty party has left, no lynching.
+
+VILLAGER-LYNCH
+The air thick with adrenaline, the mob grabs PLAYER who struggles furiously, pleading innocence, but the screams fall on deaf ears. PLAYER is dragged to the hanging tree. PLAYER is strung up, and the block kicked from beneath their feet. There is a yelp of pain and the PLAYER's neck snaps. Checking the body shows no tattoo, and the silent goodies quickly realise their mistake...
+
+WOLF-LYNCH
+After coming to a decision, PLAYER is quickly dragged from the crowd, and dragged to the hanging tree. PLAYER is strung up, and the block kicked from beneath their feet. There is a yelp of pain and the PLAYER's neck snaps. Goodies check the body and find the Baddie tattoo where it's supposed to be...
+
+SEER-LYNCH
+PLAYER runs before the mob is organised, dashing away from the village. Tackled to the ground near to the lake, PLAYER is tied to a log, screaming, and thrown into the water. With no means of escape, PLAYER drowns, but as the Goodies watch, strange spying instruments make it to the surface and their mistake is all too apparent...
+
+IS-LYNCHED
+PLAYER, the ROLE, is lynched!
+
+NO-LYNCH
+As the sun gets low in the sky, the goodies are unable to reach a decision on who to lynch, and without the momentum of a united mob, the crowd slowly dissipates to take shelter in their homes...
+
+TIE-NO-LYNCH
+As the sun gets low in the sky, the goodies are unable to reach a decision on who to lynch. A tie is reached and the crowd slowly dissipates to take shelter in their homes...
+
+TIE
+As the sun gets low in the sky, the goodies are unable to reach a decision on who to lynch - a tie is reached. According to the rules, a coinflip will decide today's lynch...
+
+ROSTER-DISPLAY-OFF-NOTICE
+Roster display is not on. It can be turned on by an OP after the game is finished!
+
+ROSTER-DISPLAY-PROBLEM
+Unknown problem showing the roster. Sorry!
+
+SEPARATOR
+-------------------------------------
+
+FIRSTNIGHT
+Night descends and unknown to the Goodies, tucked up in their warm beds, the early demise of one of their number is being plotted.
+
+NIGHTTIME
+As the moon rises, the lynching mob dissipates, return to their homes and settle into an uneasy sleep. But in the pale moonlight, something stirs...
+
+WOLF-INSTRUCTIONS
+Baddie, you have TIME seconds to decide who to kill. To make your final decision type '/msg BOTNAME kill <player>' or '/msg BOTNAME killno <number>'
+
+WOLVES-INSTRUCTIONS
+Baddie, you have TIME seconds to confer via PM and unanimously decide who to kill. To make your final decision type '/msg BOTNAME kill <player>' or '/msg BOTNAME killno <number>'.
+
+SEER-INSTRUCTIONS
+Spy, you have TIME seconds to PM one name to BOTNAME and discover their true alignment. To spy a player type '/msg BOTNAME spy <player>' or '/msg BOTNAME spyno <number>'
+
+WOLF-CHOICE
+You have chosen PLAYER to be killed tonight.
+
+WOLVES-CHOICE
+You have chosen PLAYER to be killed tonight. We shall see who your teammate selects...
+
+WOLF-WRONG-CHOICE
+Please choose a valid player.
+
+WOLVES-CHOICE-OTHER
+PLAYER has chosen to kill PLAYER2.
+PLAYER2 is PLAYER's choice of victim this night.
+
+VILLAGER-ROLE
+You are a peaceful Goodie turned vigilante! You must root out the WOLF by casting accusations or protesting innocence at the daily meeting, and vote who you believe to be untrustworthy during the daily Lynch Vote. Good luck!
+
+V-ROLE
+REMINDER: You are a Goodie with no special abilities.
+
+WOLF-ROLE
+You are a Baddie! You must decide your nightly victims. By day you must deceive the goodies and attempt to blend in. Keep this information to yourself! Good luck!
+
+W-ROLE
+REMINDER: You are a Baddie.
+
+WOLVES-ROLE
+You are a Baddie! Your fellow Baddie is PLAYER. You must confer with them via PM to decide your nightly victims. By day you must deceive the goodies and attempt to blend in. Keep this information to yourself! Good luck!
+
+WS-ROLE
+REMINDER: You are a Baddie. Your teammate is PLAYER.
+
+SEER-ROLE
+You are one granted the gift of second sight, a Spy! Each night you may spy one of the players, and you will be told whether or not that person is a Baddie - a powerful gift indeed! But beware revealing this information to the WOLF, or face swift retribution!
+
+SEER-EXT-ROLE
+You are one granted the gift of second sight, a Spy! Each night you may spy one of the players, and you will be told whether or not that person is a Baddie. Be aware that you could be PARANOID (thinks everybody is a Baddie), NAIVE (thinks everybody is a Goodie), INSANE (spies Baddies as Goodies and Goodies as Baddies) and SANE (spy results are correct).
+
+S-ROLE
+REMINDER: You are the Goodie Spy.
+
+S-EXT-ROLE
+REMINDER: You are a Goodie Spy. You could be PARANOID (thinks everybody is a Baddie), NAIVE (thinks everybody is a Goodie), INSANE (spies Baddies as Goodies and Goodies as Baddies) and SANE (spy results are correct).
+
+VILLAGER-KILL
+The Goodies gather the next morning it the center plaza, but PLAYER does not appear. The Goodies converge on PLAYER's home and find a dead body. A knife shows that this was not a natural death. After carrying the body to the church, the hysterical Goodies, return to the central plaza to decide how to retaliate...
+As Goodies begin to gather it the center plaza, a scream is heard from the direction of PLAYER's house. The person who had screamed points to the garden, where the body of PLAYER lies on the ground, shot twice in the back. Apparently PLAYER was trying to flee their attacker...
+When the Goodies gather it the center plaza, one comes running from the hanging tree, screaming at others to follow. When they arrive at the hanging tree, a gentle creaking echoes through the air as the body of PLAYER swings gently in the breeze. A goodie has died...
+
+SEER-KILL
+As Goodies begin to gather it the center plaza, a scream is heard from the direction of PLAYER's house. The person who had screamed points to the garden, where the body of PLAYER lies on the ground, shot twice in the back. Apparently PLAYER was trying to flee their attacker. Searching the house, the Goodies realize the Spy is now dead ...
+
+IS-KILLED
+PLAYER, the ROLE, has been killed!
+
+NO-KILL
+The villagers gather the next morning in the village center, to sighs of relief - it appears there was no attack the previous night.
+
+NOT-VOTED
+Manfred has struck! PLAYER suddenly clutches their chest, before falling to the floor as blood pours from their ears. May that be a lesson to all who attempt to defend the WOLF by being inactive.
+
+NOT-VOTED-NOTICE
+You have been removed from the game for not voting for two Lynch Votes in a row.
+
+WOLF-WIN
+Having successfully deceived the rest of the Goodies, PLAYER breaks into the final Goodies' home and kills them in their sleep. A feast follows, before the next challenge...
+
+WOLVES-WIN
+That night, their plan of deception finally bearing it's fruit, the Baddies finish off the rest of the Goodies, and stop for a feast before their next challenge...
+
+VILLAGERS-WIN
+With the Baddies killed, the goodies cheer! They have WON!
+
+CONGR-VILL
+Congratulations, Goodie! You win!
+
+CONGR-WOLF
+Congratulations, PLAYER! You win!
+
+CONGR-WOLVES
+Congratulations, Baddies! You win!
+
+WOLVES-WERE
+The Baddies were:
+
+SEER-DEAD
+You are dead and can no longer help the Goodies win.
+
+WOLF-DEAD
+You are dead and can no longer help the Baddies win.
+
+NOT-WOLF
+You are not a Baddie!
+
+ALIVE-TEXT
+The players left alive are: 
+
+WILL-SEE
+You will see the identity of PLAYER upon the dawning of tomorrow.
+
+CANNOT-SPY-WOLF
+You cannot spy. Nice try :P
+
+CANNOT-SPY-DEAD-PEOPLE
+You cannot spy dead people. Choose someone else.
+
+CANNOT-SPY-YOURSELF
+You already know who you are! You are a Goodie Spy!
+
+CANNOT-SPY-BYSTANDERS
+That person is not playing.
+
+CANNOT-SPY-CHOICE
+Please provide a valid player name.
+
+CANNOT-KILL-YOURSELF
+You cannot kill yourself!
+
+CANNOT-KILL-DEAD
+That person is already dead.
+
+NOT-SEER
+You are not the Spy!
+
+SEER-SEE
+You find the identity of PLAYER to be ISAWOLF?!
+
+SEER-SEE-KILLED
+It appears the WOLF got to you before you could spy ...
+
+SEER-SEE-TARGET-KILLED
+It appears your target was killed by the WOLF before you could spy him/her ...
+
+TALLY
+Tallying Votes...
+
+DYING-BREATH
+You are allowed a single line as your dying breath.
+
+CHEAT-KICK
+No quoting me, cheater.
+
+GENERIC-ERROR-PVM-MESSAGE
+Sorry, I cannot answer that: either it's not the right time or it's a wrong command (check your spelling)
+
+BORED
+I'm bored. Anyone else bored?
+Someone type !start or !spymafia. I implore you!
+You know, there are some great games in this channel ... Just type !howto and find out.
+*yawn*
+Anyone can start a game if they like. Just type !spymafia or !start.
+How about a nice quick game of me? ... I mean Mafia.
+Betcha y'all scared of losing. That's why you won't play. :P
+Wow. Didn't think people were this boring...
+A lynch a day keeps the murderous tendencies away. *nods*
+Come on, don't let EvilOne win ... *wink*
+Let's start a game and make EvilOne jealous again :D
+
+#end of file

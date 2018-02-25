@@ -1,0 +1,1 @@
+javaw -classpath .;lib/pircbot.jar org.jibble.pircbot.llama.werewolf.Werewolf
